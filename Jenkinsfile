@@ -5,13 +5,15 @@ pipeline {
         IMAGE_NAME = "mycppapp"
         IMAGE_TAG = "v${BUILD_NUMBER}"
         DOCKER_REGISTRY = "your-registry.com/your-repo"
+		GIT_REPO = "https://github.com/jhjhuaijie/MyAppProject.git"
+        GIT_BRANCH = "main"  // 根据你仓库实际分支调整
     }
 
     stages {
         stage('Checkout') {
             steps {
                 echo "拉取代码"
-                git 'https://github.com/jhjhuaijie/MyAppProject.git'
+                git branch: "${GIT_BRANCH}", url: "${GIT_REPO}"
             }
         }
 
