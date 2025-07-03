@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "拉取代码"
-                git 'https://github.com/jhjhuaijie/MyAppPorject.git'
+                git 'https://github.com/jhjhuaijie/MyAppProject.git'
             }
         }
 
