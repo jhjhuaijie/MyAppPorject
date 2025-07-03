@@ -5,8 +5,8 @@ RUN mkdir -p /var/lib/apt/lists/partial \
  && apt-get update && apt-get install -y \
     build-essential cmake git cppcheck \
     libgtest-dev && \
-    cd /usr/src/gtest && makedir build && cd build && \
-    cmake .. && make -j$(nproc) && cp *.a /usr/lib && \
+    cd /usr/src/gtest && mkdir build && cd build && \
+    cmake .. && make -j$(nproc) && cp ./lib/*.a /usr/lib && \
     apt-get clean
 
 COPY . /app
