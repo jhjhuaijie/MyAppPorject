@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "mycppapp"
         IMAGE_TAG = "v${BUILD_NUMBER}"
-        DOCKER_REGISTRY = "your-registry.com/your-repo"
+        DOCKER_REGISTRY = "https://hub.docker.com/repositories/gjokr"
 		GIT_REPO = "https://github.com/jhjhuaijie/MyAppProject.git"
         GIT_BRANCH = "main"  // 根据你仓库实际分支调整
     }
