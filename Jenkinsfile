@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "拉取代码"
-                git branch: "${GIT_BRANCH}", url: "${GIT_REPO}", credentialsId: "a0207895-db77-4ce0-8f6d-406aef7c80c5"
+                git branch: "${GIT_BRANCH}", url: "${GIT_REPO}"
             }
         }
 
