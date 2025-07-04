@@ -13,6 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "拉取代码"
+				deleteDir()
                 git branch: "${GIT_BRANCH}", url: "${GIT_REPO}"
             }
         }
